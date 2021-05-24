@@ -22,7 +22,10 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
-    // TODO: 2021. 05. 24. private Difficulty difficulty;
+
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
+
     @Lob
     private Byte[] image;
 
