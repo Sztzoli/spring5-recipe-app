@@ -1,14 +1,12 @@
 package com.example.spring5recipeapp.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Data
 @Entity
-@Getter
-@Setter
 public class Ingredient {
 
     @Id
@@ -25,6 +23,12 @@ public class Ingredient {
     private Recipe recipe;
 
     public Ingredient() {
+    }
+
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure uom) {
+        this.description = description;
+        this.amount = amount;
+        this.uom = uom;
     }
 
     public Ingredient(String description, BigDecimal amount, UnitOfMeasure uom, Recipe recipe) {

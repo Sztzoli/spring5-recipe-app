@@ -1,13 +1,11 @@
 package com.example.spring5recipeapp.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
-@Getter
-@Setter
 public class Notes {
 
     @Id
@@ -19,4 +17,12 @@ public class Notes {
 
     @Lob
     private String recipeNotes;
+
+    public Notes() {
+    }
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof Notes;
+    }
+
 }

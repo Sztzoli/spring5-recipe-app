@@ -1,14 +1,12 @@
 package com.example.spring5recipeapp.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@Data
 @Entity
-@Getter
-@Setter
 public class Category {
 
     @Id
