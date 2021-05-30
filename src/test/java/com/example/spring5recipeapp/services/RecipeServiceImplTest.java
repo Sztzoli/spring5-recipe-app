@@ -1,5 +1,7 @@
 package com.example.spring5recipeapp.services;
 
+import com.example.spring5recipeapp.converters.RecipeCommandToRecipe;
+import com.example.spring5recipeapp.converters.RecipeToRecipeCommand;
 import com.example.spring5recipeapp.domain.Recipe;
 import com.example.spring5recipeapp.repositories.RecipeRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,6 +27,13 @@ class RecipeServiceImplTest {
 
     @Mock
     private RecipeRepository recipeRepository;
+
+    @Mock
+    RecipeToRecipeCommand recipeToRecipeCommand;
+
+    @Mock
+    RecipeCommandToRecipe recipeCommandToRecipe;
+
 
 //    private Set<Recipe> recipes = new HashSet<>();
 
